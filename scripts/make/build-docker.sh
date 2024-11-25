@@ -36,7 +36,8 @@ linux/amd64,\
 linux/arm/v6,\
 linux/arm/v7,\
 linux/arm64,\
-linux/ppc64le"
+linux/ppc64le,\
+linux/riscv64"
 readonly docker_platforms
 
 build_date="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
@@ -103,6 +104,8 @@ cp "${dist_dir}/AdGuardHome_linux_arm_7/AdGuardHome/AdGuardHome" \
 	"${dist_docker}/AdGuardHome_linux_arm_v7"
 cp "${dist_dir}/AdGuardHome_linux_ppc64le/AdGuardHome/AdGuardHome" \
 	"${dist_docker}/AdGuardHome_linux_ppc64le_"
+cp "${dist_dir}/AdGuardHome_linux_riscv64/AdGuardHome/AdGuardHome" \
+	"${dist_docker}/AdGuardHome_linux_riscv64_"
 
 # Don't use quotes with $docker_version_tag and $docker_channel_tag, because we
 # want word splitting and or an empty space if tags are empty.
