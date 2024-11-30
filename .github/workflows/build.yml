@@ -36,7 +36,7 @@ jobs:
 
       - name: Build and push
         run: |
-          REPOS=" \
-            ${{ secrets.DOCKERHUB_USER }}/adguardhome \
+          REPOS="\
+            ${{ secrets.DOCKERHUB_USER }}/riscv-adguardhome \
             ghcr.io/${{ github.repository }} \
           " ./scripts/build-docker-riscv.sh

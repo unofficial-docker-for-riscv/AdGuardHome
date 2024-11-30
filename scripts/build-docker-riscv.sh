@@ -21,7 +21,7 @@ tar -xzf $dist_dir/AdGuardHome_linux_riscv64.tar.gz -C $dist_dir/AdGuardHome_lin
 cp "${dist_dir}/AdGuardHome_linux_riscv64/AdGuardHome/AdGuardHome" \
 	"${dist_docker}/AdGuardHome_linux_riscv64_"
 
-repos=(${REPOS:-ngc7331/adguardhome})
+repos=(${REPOS:-ngc7331/riscv-adguardhome})
 tags=()
 for repo in ${repos[@]}; do
 	tags+=("-t ${repo,,}:${version}")
